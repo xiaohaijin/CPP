@@ -12,7 +12,14 @@ HEADERS += \
     stack3.hpp \
     stacknontype.hpp \
     addvalue.hpp \
-    stackauto.hpp
+    stackauto.hpp \
+    ddspace.hpp \
+    printcoll.hpp \
+    lessarray.hpp \
+    lessstring.hpp \
+    stack5decl.hpp \
+    stack6decl.hpp \
+    stack6assign.hpp
 
 SOURCES += \
     max1.cpp \
@@ -21,4 +28,6 @@ SOURCES += \
     stack3test.cpp \
     stacknontype.cpp \
     stackauto.cpp \
-    varprint1.cpp
+    varprint1.cpp \
+    foldtraverse.cpp \
+    stack5assign.cpp
