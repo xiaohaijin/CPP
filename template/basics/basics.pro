@@ -19,7 +19,9 @@ HEADERS += \
     lessstring.hpp \
     stack5decl.hpp \
     stack6decl.hpp \
-    stack6assign.hpp
+    stack6assign.hpp \
+    header.hpp \
+    stack9.hpp
 
 SOURCES += \
     max1.cpp \
@@ -30,4 +32,8 @@ SOURCES += \
     stackauto.cpp \
     varprint1.cpp \
     foldtraverse.cpp \
-    stack5assign.cpp
+    stack5assign.cpp \
+    unit1.cpp \
+    unit2.cpp \
+    variablenontype.cpp \
+    stack9test.cpp

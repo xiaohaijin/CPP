@@ -1,0 +1,20 @@
+In file included from /opt/gcc/install/include/c++/7.3.0/bits/stl_algobase.h:71:0,
+                 from /opt/gcc/install/include/c++/7.3.0/bits/char_traits.h:39,
+                 from /opt/gcc/install/include/c++/7.3.0/ios:40,
+                 from /opt/gcc/install/include/c++/7.3.0/ostream:38,
+                 from /opt/gcc/install/include/c++/7.3.0/iostream:39,
+                 from errornovel1.cpp:1:
+/opt/gcc/install/include/c++/7.3.0/bits/predefined_ops.h: In instantiation of ‘bool __gnu_cxx::__ops::_Iter_pred<_Predicate>::operator()(_Iterator) [with _Iterator = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, double> >; _Predicate = main()::<lambda(const string&)>]’:
+/opt/gcc/install/include/c++/7.3.0/bits/stl_algo.h:104:42:   required from ‘_InputIterator std::__find_if(_InputIterator, _InputIterator, _Predicate, std::input_iterator_tag) [with _InputIterator = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, double> >; _Predicate = __gnu_cxx::__ops::_Iter_pred<main()::<lambda(const string&)> >]’
+/opt/gcc/install/include/c++/7.3.0/bits/stl_algo.h:161:23:   required from ‘_Iterator std::__find_if(_Iterator, _Iterator, _Predicate) [with _Iterator = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, double> >; _Predicate = __gnu_cxx::__ops::_Iter_pred<main()::<lambda(const string&)> >]’
+/opt/gcc/install/include/c++/7.3.0/bits/stl_algo.h:3932:28:   required from ‘_IIter std::find_if(_IIter, _IIter, _Predicate) [with _IIter = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, double> >; _Predicate = main()::<lambda(const string&)>]’
+errornovel1.cpp:10:6:   required from here
+/opt/gcc/install/include/c++/7.3.0/bits/predefined_ops.h:283:11: error: no match for call to ‘(main()::<lambda(const string&)>) (std::pair<const std::__cxx11::basic_string<char>, double>&)’
+  { return bool(_M_pred(*__it)); }
+           ^~~~~~~~~~~~~~~~~~~~
+/opt/gcc/install/include/c++/7.3.0/bits/predefined_ops.h:283:11: note: candidate: bool (*)(const string&) {aka bool (*)(const std::__cxx11::basic_string<char>&)} <conversion>
+/opt/gcc/install/include/c++/7.3.0/bits/predefined_ops.h:283:11: note:   candidate expects 2 arguments, 2 provided
+errornovel1.cpp:8:76: note: candidate: main()::<lambda(const string&)>
+   auto pos = std::find_if(coll.begin(), coll.end(), [](const std::string &s){
+                                                                            ^
+errornovel1.cpp:8:76: note:   no known conversion for argument 1 from ‘std::pair<const std::__cxx11::basic_string<char>, double>’ to ‘const string& {aka const std::__cxx11::basic_string<char>&}’
